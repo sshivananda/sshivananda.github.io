@@ -8,7 +8,7 @@
     "preview": "astro preview"
   },
   "dependencies": {
-    "astro": "^5"
+    "astro": "^6"
   },
   "packageManager": "yarn@4.14.1"
 }
