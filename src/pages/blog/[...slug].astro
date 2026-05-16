@@ -1,0 +1,76 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection, render } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+interface Props {
+  post: CollectionEntry<'blog'>;
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+const fmtDate = (d: Date) =>
+  d
+    .toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })
+    .toUpperCase();
+---
+
+<Base
+  title={`${post.data.title} — Shivanand Sahu`}
+  description={post.data.hook}
+  ogDescription={post.data.hook}
+>
+  <div class="container">
+
+    <header class="nav fade d1">
+      <a class="brand" href="/">Shivanand Sahu</a>
+      <div class="right">
+        <a href="/blog">writing</a>
+        <a href="/#focus">work</a>
+        <a href="/#about">about</a>
+        <span class="loc">bengaluru · in</span>
+      </div>
+    </header>
+
+    <article>
+      <header class="post-header fade d2">
+        <div class="post-meta">
+          <span class="post-date">{fmtDate(post.data.date)}</span>
+          {post.data.category && (
+            <span class="post-tag">{post.data.category}</span>
+          )}
+          {post.data.reading_time && (
+            <span class="post-reading">{post.data.reading_time} min read</span>
+          )}
+        </div>
+        <h1 class="post-title">{post.data.title}</h1>
+        <p class="post-hook">{post.data.hook}</p>
+      </header>
+
+      <div class="prose fade d3">
+        <Content />
+      </div>
+    </article>
+
+    <footer>
+      <p class="back"><a href="/blog">← back to writing</a></p>
+      <p class="closer">If you've read this far, write back.</p>
+      <ul class="contacts">
+        <li><a href="mailto:sahu.shivanand@gmail.com">sahu.shivanand@gmail.com</a></li>
+        <li><a href="https://www.linkedin.com/in/sshivananda/" target="_blank" rel="noopener">linkedin ↗</a></li>
+        <li><a href="https://github.com/sshivananda" target="_blank" rel="noopener">github ↗</a></li>
+      </ul>
+      <p class="copy">© 2026 · bengaluru · in</p>
+    </footer>
+
+  </div>
+</Base>
