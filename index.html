@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shivanand Sahu — Principal Engineer, Bengaluru</title>
+  <meta name="description" content="Principal engineer in Bengaluru building software for healthcare — and, lately, for finance. Currently working on Sieve, a mutual fund tracking and recommendation tool." />
+  <meta property="og:title" content="Shivanand Sahu — Principal Engineer, Bengaluru" />
+  <meta property="og:description" content="Building for the things that quietly run a life — your health, your money. Currently building Sieve." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #FBFAF5;
+      --ink: #141414;
+      --ink-2: #5C5C58;
+      --ink-3: #8E8E88;
+      --line: rgba(20, 20, 20, 0.10);
+      --line-2: rgba(20, 20, 20, 0.06);
+      --accent: #0F6E56;
+      --accent-soft: #E2EFEA;
+      --warm: #8E5D17;
+      --warm-soft: #FBEEDA;
+      --serif: 'Fraunces', Georgia, 'Times New Roman', serif;
+      --sans: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --mono: 'Geist Mono', 'SF Mono', Menlo, monospace;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 38px 30px 88px;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade { opacity: 0; animation: fadeUp 0.7s ease-out forwards; }
+    @media (prefers-reduced-motion: reduce) {
+      .fade { animation: none; opacity: 1; }
+    }
+    .d1 { animation-delay: 0.05s; }
+    .d2 { animation-delay: 0.15s; }
+    .d3 { animation-delay: 0.25s; }
+    .d4 { animation-delay: 0.35s; }
+    .d5 { animation-delay: 0.45s; }
+    .d6 { animation-delay: 0.55s; }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 86px;
+      font-size: 14px;
+    }
+    .nav .brand {
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+    .nav .right { display: flex; gap: 22px; align-items: baseline; }
+    .nav a { color: var(--ink-2); text-decoration: none; transition: color 0.15s; }
+    .nav a:hover { color: var(--accent); }
+    .nav .loc {
+      color: var(--ink-3);
+      font-variant-caps: all-small-caps;
+      letter-spacing: 0.1em;
+      font-size: 13px;
+    }
+
+    .byline {
+      font-variant-caps: all-small-caps;
+      letter-spacing: 0.18em;
+      font-size: 13px;
+      color: var(--ink-2);
+      font-weight: 500;
+      margin: 0 0 28px;
+    }
+
+    .hero-title {
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: 54px;
+      line-height: 1.0;
+      letter-spacing: -0.035em;
+      margin: 0 0 32px;
+      color: var(--ink);
+    }
+    .hero-title em { font-style: italic; font-weight: 600; color: var(--accent); }
+    .hero-intro {
+      font-size: 17px;
+      line-height: 1.65;
+      color: var(--ink);
+      margin: 0 0 40px;
+      max-width: 700px;
+    }
+
+    .ctas { display: flex; flex-wrap: wrap; gap: 18px 28px; margin-bottom: 112px; }
+    .cta {
+      font-variant-caps: all-small-caps;
+      letter-spacing: 0.12em;
+      font-size: 13px;
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 0.5px solid var(--ink);
+      padding-bottom: 4px;
+      transition: color 0.18s, border-color 0.18s;
+    }
+    .cta:hover { color: var(--accent); border-color: var(--accent); }
+    .cta.muted { color: var(--ink-2); border-color: var(--line); }
+    .cta.muted:hover { color: var(--accent); border-color: var(--accent); }
+
+    section { margin-bottom: 112px; }
+    section:last-of-type { margin-bottom: 56px; }
+
+    .s-label {
+      font-variant-caps: all-small-caps;
+      letter-spacing: 0.16em;
+      font-size: 13px;
+      color: var(--ink-2);
+      margin: 0 0 20px;
+    }
+    .s-head {
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: 33px;
+      line-height: 1.1;
+      letter-spacing: -0.025em;
+      margin: 0 0 44px;
+      color: var(--ink);
+    }
+    .s-head em { font-style: italic; font-weight: 600; color: var(--accent); }
+
+    .project { padding: 28px 0; border-top: 0.5px solid var(--line-2); }
+    .project:first-of-type { border-top: 0.5px solid var(--line-2); }
+    .project:last-of-type { border-bottom: 0.5px solid var(--line-2); }
+    .project-meta {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--ink-3);
+      margin-bottom: 14px;
+      letter-spacing: 0.06em;
+    }
+    .status {
+      display: inline-block;
+      padding: 2px 10px;
+      border-radius: 999px;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      font-variant-caps: all-small-caps;
+      font-family: var(--sans);
+      background: var(--warm-soft);
+      color: var(--warm);
+    }
+    .status.live { background: var(--accent-soft); color: var(--accent); }
+    .status.planned { background: rgba(20,20,20,0.04); color: var(--ink-3); }
+    .project-name {
+      font-family: var(--serif);
+      font-size: 27px;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      line-height: 1.15;
+      margin: 0 0 14px;
+    }
+    .project-name a {
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 0.5px solid var(--line);
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .project-name a:hover { border-color: var(--accent); color: var(--accent); }
+    .project-name.placeholder { color: var(--ink-3); font-weight: 600; font-style: italic; }
+    .project-desc {
+      font-size: 16px;
+      line-height: 1.65;
+      color: var(--ink);
+      margin: 0 0 16px;
+      max-width: 700px;
+    }
+    .project-desc.placeholder { color: var(--ink-3); }
+    .project-stack {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--ink-3);
+      margin: 0;
+      letter-spacing: 0.04em;
+    }
+    .project-principle {
+      font-family: var(--serif);
+      font-style: italic;
+      font-weight: 500;
+      font-size: 17px;
+      line-height: 1.4;
+      color: var(--accent);
+      margin: 0 0 18px;
+      max-width: 620px;
+    }
+
+    .companies { margin-bottom: 40px; }
+    .company {
+      display: grid;
+      grid-template-columns: 40px 1fr auto;
+      gap: 18px;
+      align-items: center;
+      padding: 18px 0;
+      border-top: 0.5px solid var(--line-2);
+    }
+    .company:last-of-type { border-bottom: 0.5px solid var(--line-2); }
+    .company-logo {
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      overflow: hidden;
+      flex-shrink: 0;
+      background: rgba(20,20,20,0.02);
+    }
+    .company-logo img { max-width: 78%; max-height: 78%; object-fit: contain; }
+    .mono-fallback {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+      font-weight: 500;
+      font-family: var(--sans);
+    }
+    .m-ff { background: #FBEEDA; color: #8E5D17; }
+    .m-ath { background: #ECF3E1; color: #355E22; }
+    .company-text { display: flex; flex-direction: column; gap: 2px; }
+    .company-name { font-size: 15px; font-weight: 500; color: var(--ink); }
+    .company-role { font-size: 13px; color: var(--ink-2); }
+    .company-dates {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--ink-3);
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+    }
+
+    .about-body { font-size: 16px; line-height: 1.7; color: var(--ink); }
+    .about-body p { margin: 0 0 18px; max-width: 700px; }
+
+    .pull {
+      font-family: var(--serif);
+      font-style: italic;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 1.32;
+      color: var(--ink);
+      border-left: 3px solid var(--accent);
+      padding: 4px 0 4px 22px;
+      margin: 32px 0;
+      max-width: 640px;
+    }
+
+    footer {
+      margin-top: 56px;
+      padding-top: 36px;
+      border-top: 0.5px solid var(--line);
+    }
+    .closer {
+      font-family: var(--serif);
+      font-style: italic;
+      font-weight: 600;
+      font-size: 23px;
+      line-height: 1.36;
+      color: var(--ink);
+      margin: 0 0 28px;
+      max-width: 640px;
+    }
+    .contacts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px 28px;
+      list-style: none;
+      padding: 0;
+      margin: 0 0 32px;
+      font-size: 14px;
+    }
+    .contacts a {
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 0.5px solid var(--line);
+      padding-bottom: 2px;
+      transition: border-color 0.18s, color 0.18s;
+    }
+    .contacts a:hover { color: var(--accent); border-color: var(--accent); }
+    .copy {
+      font-variant-caps: all-small-caps;
+      letter-spacing: 0.16em;
+      font-size: 12px;
+      color: var(--ink-3);
+      margin: 0;
+    }
+
+    @media (max-width: 600px) {
+      .container { padding: 24px 20px 60px; }
+      .nav { margin-bottom: 56px; flex-direction: column; align-items: flex-start; gap: 14px; }
+      .nav .right { gap: 18px; flex-wrap: wrap; }
+      .hero-title { font-size: 37px; letter-spacing: -0.03em; }
+      .s-head { font-size: 26px; }
+      .project-name { font-size: 23px; }
+      .closer { font-size: 20px; }
+      .pull { font-size: 20px; padding-left: 16px; }
+      .ctas { margin-bottom: 80px; }
+      section { margin-bottom: 80px; }
+      .company { grid-template-columns: 36px 1fr; grid-template-rows: auto auto; column-gap: 14px; row-gap: 4px; }
+      .company-dates { grid-column: 2; grid-row: 2; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <header class="nav fade d1">
+      <a class="brand" href="/">Shivanand Sahu</a>
+      <div class="right">
+        <a href="#focus">work</a>
+        <a href="#about">about</a>
+        <span class="loc">bengaluru · in</span>
+      </div>
+    </header>
+
+    <section style="margin-bottom: 0;">
+      <p class="byline fade d2">Shivanand Sahu · principal engineer · est. 2012</p>
+      <h1 class="hero-title fade d3">Hello, I'm Shivanand. Building for the things that quietly run a life — your <em>health</em>, your money.</h1>
+      <p class="hero-intro fade d4">Principal engineer at Firefly Health in Bengaluru, and a father. I'm passionate about what I build — for over a decade that's meant healthcare software, and lately finance too, through Sieve. Fitness and gaming are my side-of-the-desk projects.</p>
+      <div class="ctas fade d5">
+        <a class="cta" href="#focus">see what i'm building →</a>
+        <a class="cta muted" href="mailto:sahu.shivanand@gmail.com">say hello ↗</a>
+        <a class="cta muted" href="https://www.linkedin.com/in/sshivananda/" target="_blank" rel="noopener">linkedin ↗</a>
+      </div>
+    </section>
+
+    <section id="focus" class="fade d6">
+      <p class="s-label">§ current focus · 2026 —</p>
+      <h2 class="s-head">Building at the healthcare-↔-finance intersection.</h2>
+
+      <article class="project">
+        <div class="project-meta">
+          <span class="status">wip</span>
+        </div>
+        <!-- When Sieve has a public URL, replace href="#" with the real link -->
+        <h3 class="project-name"><a href="#">Sieve</a></h3>
+        <p class="project-desc">Sieve fine-tunes your goals, filters out the noise, and turns the rest into actionable financial insight. A personal project, built because the way most people choose where their money goes deserves better than guesswork.</p>
+        <p class="project-principle">Because your financial health matters as much as your physical.</p>
+        <p class="project-stack">Python · React Native</p>
+      </article>
+    </section>
+
+    <section id="about">
+      <p class="s-label">§ about</p>
+      <h2 class="s-head">Over a decade in healthcare software.</h2>
+
+      <div class="companies">
+        <div class="company">
+          <span class="company-logo">
+            <img src="logos/firefly.svg" alt="Firefly Health" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <span class="mono-fallback m-ff" style="display: none;">F</span>
+          </span>
+          <span class="company-text">
+            <span class="company-name">Firefly Health</span>
+            <span class="company-role">Primary care, remote-first · Bengaluru</span>
+          </span>
+          <span class="company-dates">2020 → now</span>
+        </div>
+
+        <div class="company">
+          <span class="company-logo">
+            <img src="logos/athenahealth.svg" alt="athenahealth" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <span class="mono-fallback m-ath" style="display: none;">a</span>
+          </span>
+          <span class="company-text">
+            <span class="company-name">athenahealth</span>
+            <span class="company-role">Chennai then Bengaluru · ended as principal MTS</span>
+          </span>
+          <span class="company-dates">2014 → 2020</span>
+        </div>
+      </div>
+
+      <div class="about-body">
+        <p>Healthcare has been the work for over a decade — long enough to find both the obvious problems and the quieter, structural ones. The next domain that feels under-tooled in the same way is financial health. That's the bet behind Sieve, and probably most of what's next.</p>
+        <p class="pull">Stack is a means. The problem is the point.</p>
+        <p>I work in Python and React/React Native today; earlier chapters were Node, TypeScript, Django, AWS, Snowflake, and Java. None of it matters very much in isolation — they're tools for whatever the problem turns out to need.</p>
+        <p>Away from the screen: a father first, and a fairly committed presence in the gym and in games. Both, it turns out, are good practice for the day job — long games, compounding effort, and paying attention to the things that quietly add up.</p>
+      </div>
+    </section>
+
+    <footer>
+      <p class="closer">If you want to talk healthcare, finance, or how the two connect — write back.</p>
+      <ul class="contacts">
+        <li><a href="mailto:sahu.shivanand@gmail.com">sahu.shivanand@gmail.com</a></li>
+        <li><a href="https://www.linkedin.com/in/sshivananda/" target="_blank" rel="noopener">linkedin ↗</a></li>
+        <li><a href="https://github.com/sshivananda" target="_blank" rel="noopener">github ↗</a></li>
+      </ul>
+      <p class="copy">© 2026 · bengaluru · in</p>
+    </footer>
+
+  </div>
+</body>
+</html>
