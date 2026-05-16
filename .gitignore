@@ -1,0 +1,13 @@
+# Astro build output
+dist/
+.astro/
+
+# Yarn Berry (non-zero-install)
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
+node_modules/

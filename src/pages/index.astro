@@ -1,0 +1,93 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base>
+  <div class="container">
+
+    <header class="nav fade d1">
+      <a class="brand" href="/">Shivanand Sahu</a>
+      <div class="right">
+        <a href="#focus">work</a>
+        <a href="#about">about</a>
+        <span class="loc">bengaluru · in</span>
+      </div>
+    </header>
+
+    <section style="margin-bottom: 0;">
+      <p class="byline fade d2">Shivanand Sahu · principal engineer · est. 2012</p>
+      <h1 class="hero-title fade d3">Hello, I'm Shivanand. Building for the things that quietly run a life — your <em>health</em>, your money.</h1>
+      <p class="hero-intro fade d4">Principal engineer at Firefly Health in Bengaluru, and a father. I'm passionate about what I build — for over a decade that's meant healthcare software, and lately finance too, through Sieve. Fitness and gaming are my side-of-the-desk projects.</p>
+      <div class="ctas fade d5">
+        <a class="cta" href="#focus">see what i'm building →</a>
+        <a class="cta muted" href="mailto:sahu.shivanand@gmail.com">say hello ↗</a>
+        <a class="cta muted" href="https://www.linkedin.com/in/sshivananda/" target="_blank" rel="noopener">linkedin ↗</a>
+      </div>
+    </section>
+
+    <section id="focus" class="fade d6">
+      <p class="s-label">§ current focus · 2026 —</p>
+      <h2 class="s-head">Building at the healthcare-↔-finance intersection.</h2>
+
+      <article class="project">
+        <div class="project-meta">
+          <span class="status">wip</span>
+        </div>
+        <!-- When Sieve has a public URL, replace href="#" with the real link -->
+        <h3 class="project-name"><a href="#">Sieve</a></h3>
+        <p class="project-desc">Sieve fine-tunes your goals, filters out the noise, and turns the rest into actionable financial insight. A personal project, built because the way most people choose where their money goes deserves better than guesswork.</p>
+        <p class="project-principle">Because your financial health matters as much as your physical.</p>
+        <p class="project-stack">Python · React Native</p>
+      </article>
+    </section>
+
+    <section id="about">
+      <p class="s-label">§ about</p>
+      <h2 class="s-head">Over a decade in healthcare software.</h2>
+
+      <div class="companies">
+        <div class="company">
+          <span class="company-logo">
+            <img src="/logos/firefly.svg" alt="Firefly Health" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <span class="mono-fallback m-ff" style="display: none;">F</span>
+          </span>
+          <span class="company-text">
+            <span class="company-name">Firefly Health</span>
+            <span class="company-role">Primary care, remote-first · Bengaluru</span>
+          </span>
+          <span class="company-dates">2020 → now</span>
+        </div>
+
+        <div class="company">
+          <span class="company-logo">
+            <img src="/logos/athenahealth.svg" alt="athenahealth" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <span class="mono-fallback m-ath" style="display: none;">a</span>
+          </span>
+          <span class="company-text">
+            <span class="company-name">athenahealth</span>
+            <span class="company-role">Chennai then Bengaluru · ended as principal MTS</span>
+          </span>
+          <span class="company-dates">2014 → 2020</span>
+        </div>
+      </div>
+
+      <div class="about-body">
+        <p>Healthcare has been the work for over a decade — long enough to find both the obvious problems and the quieter, structural ones. The next domain that feels under-tooled in the same way is financial health. That's the bet behind Sieve, and probably most of what's next.</p>
+        <p class="pull">Stack is a means. The problem is the point.</p>
+        <p>I work in Python and React/React Native today; earlier chapters were Node, TypeScript, Django, AWS, Snowflake, and Java. None of it matters very much in isolation — they're tools for whatever the problem turns out to need.</p>
+        <p>Away from the screen: a father first, and a fairly committed presence in the gym and in games. Both, it turns out, are good practice for the day job — long games, compounding effort, and paying attention to the things that quietly add up.</p>
+      </div>
+    </section>
+
+    <footer>
+      <p class="closer">If you want to talk healthcare, finance, or how the two connect — write back.</p>
+      <ul class="contacts">
+        <li><a href="mailto:sahu.shivanand@gmail.com">sahu.shivanand@gmail.com</a></li>
+        <li><a href="https://www.linkedin.com/in/sshivananda/" target="_blank" rel="noopener">linkedin ↗</a></li>
+        <li><a href="https://github.com/sshivananda" target="_blank" rel="noopener">github ↗</a></li>
+      </ul>
+      <p class="copy">© 2026 · bengaluru · in</p>
+    </footer>
+
+  </div>
+</Base>
