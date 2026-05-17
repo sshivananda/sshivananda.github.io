@@ -36,7 +36,7 @@ So the page renders, looks like the mock, and waits.
 
 Half the weekend went into things you can't see in a browser.
 
-Inside `web/src/`, there's a folder called `adapters/`. Inside it: `auth/`, `email/`, `fund-meta/`, `cas-parser/`, `cipher/`, `storage/`. Each one contains a README and nothing else. No code. No `interface.ts`. Six rooms with the doors marked, the furniture unbought, the walls unpainted.
+Inside `web/src/`, there's a folder called `adapters/` — one folder for each outside system the app talks to. Inside it: `auth/`, `email/`, `fund-meta/`, `cas-parser/`, `cipher/`, `storage/`. Each one contains a README and nothing else. No code. No `interface.ts`. Six rooms with the doors marked, the furniture unbought, the walls unpainted.
 
 There's also an ESLint rule that does this: if I write `import _ from 'lodash'` anywhere in `src/app/`, the build fails with an error message linking to ADR-0001. If I write the same line in `src/adapters/auth/`, it passes. I tested both. The rule fires. The exemption works.
 
