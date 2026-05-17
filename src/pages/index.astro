@@ -1,5 +1,15 @@
 ---
 import Base from '../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const recentPosts = (await getCollection('blog'))
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+  .slice(0, 3);
+
+const fmtDate = (d: Date) =>
+  d
+    .toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })
+    .toUpperCase();
 ---
 
 <Base>
@@ -40,6 +50,42 @@ import Base from '../layouts/Base.astro';
         <p class="project-principle">Because your financial health matters as much as your physical.</p>
         <p class="project-stack">Python · React Native</p>
       </article>
+    </section>
+
+    <section id="writing">
+      <p class="s-label">§ writing</p>
+      <h2 class="s-head">Notes from the workbench.</h2>
+
+      <ul class="blog-list compact">
+        {recentPosts.map((post) => (
+          <li class="blog-item">
+            <div class="blog-meta">
+              <span class="blog-date">{fmtDate(post.data.date)}</span>
+              {post.data.category && (
+                <span class="blog-tag">{post.data.category}</span>
+              )}
+            </div>
+            <h3 class="blog-title">
+              <a href={`/blog/${post.id}`}>{post.data.title}</a>
+            </h3>
+            <p class="blog-hook">{post.data.hook}</p>
+            <a class="blog-readmore" href={`/blog/${post.id}`}>
+              Read post
+              {post.data.reading_time && (
+                <>
+                  <span class="blog-readmore-dot" aria-hidden="true">·</span>
+                  <span class="blog-readmore-time">{post.data.reading_time} min</span>
+                </>
+              )}
+              <span class="blog-readmore-arrow" aria-hidden="true">→</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+
+      <p class="blog-allwriting">
+        <a href="/blog">all writing <span aria-hidden="true">→</span></a>
+      </p>
     </section>
 
     <section id="about">

@@ -49,11 +49,16 @@ const fmtDate = (d: Date) =>
               <a href={`/blog/${post.id}`}>{post.data.title}</a>
             </h2>
             <p class="blog-hook">{post.data.hook}</p>
-            {post.data.reading_time && (
-              <a class="blog-readmore" href={`/blog/${post.id}`}>
-                {post.data.reading_time} min <span aria-hidden="true">→</span>
-              </a>
-            )}
+            <a class="blog-readmore" href={`/blog/${post.id}`}>
+              Read post
+              {post.data.reading_time && (
+                <>
+                  <span class="blog-readmore-dot" aria-hidden="true">·</span>
+                  <span class="blog-readmore-time">{post.data.reading_time} min</span>
+                </>
+              )}
+              <span class="blog-readmore-arrow" aria-hidden="true">→</span>
+            </a>
           </li>
         ))}
       </ul>

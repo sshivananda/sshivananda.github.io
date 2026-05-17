@@ -361,14 +361,38 @@ footer {
   max-width: 680px;
 }
 .blog-readmore {
+  display: inline-block;
+  font-variant-caps: all-small-caps;
+  letter-spacing: 0.12em;
+  font-size: 14px;
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 0.5px solid var(--accent);
+  padding: 4px 0;
+  margin-top: 4px;
+  transition: color 0.18s, border-color 0.18s, transform 0.18s;
+}
+.blog-readmore:hover { color: var(--ink); border-color: var(--ink); }
+.blog-readmore .blog-readmore-dot { color: var(--ink-3); margin: 0 6px; }
+.blog-readmore .blog-readmore-time { color: var(--ink-3); font-family: var(--mono); font-variant-caps: normal; letter-spacing: 0.04em; font-size: 12px; }
+.blog-readmore .blog-readmore-arrow { display: inline-block; margin-left: 6px; transition: transform 0.18s; }
+.blog-readmore:hover .blog-readmore-arrow { transform: translateX(3px); }
+
+.blog-allwriting {
+  margin: 28px 0 0;
   font-family: var(--mono);
   font-size: 12px;
-  letter-spacing: 0.06em;
-  color: var(--ink-3);
-  text-decoration: none;
-  transition: color 0.2s;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
-.blog-readmore:hover { color: var(--accent); }
+.blog-allwriting a {
+  color: var(--ink-2);
+  text-decoration: none;
+  border-bottom: 0.5px solid var(--line);
+  padding-bottom: 2px;
+  transition: color 0.2s, border-color 0.2s;
+}
+.blog-allwriting a:hover { color: var(--accent); border-color: var(--accent); }
 
 .post-header { margin-bottom: 56px; }
 .post-meta {
