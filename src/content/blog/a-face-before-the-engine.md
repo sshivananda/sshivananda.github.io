@@ -30,7 +30,7 @@ That's the milestone. M0 is the spine: everything wired up and a landing page th
 
 A version of me wanted to make the buttons do *something*. Add a coming-soon page. Wire up an email capture. Show a confetti animation when someone clicks. None of those would have been the work this weekend was for. The point of M0 is the smallest possible thing that exercises the deploy pipeline end-to-end. Adding a feature would have been the wrong currency.
 
-So the page renders, looks like the mock, and waits.
+So the page renders at [sieve.money](https://sieve.money), looks like the mock, and waits.
 
 ## The boundaries before there are files in them
 
