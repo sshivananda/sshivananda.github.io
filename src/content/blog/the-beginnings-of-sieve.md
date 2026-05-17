@@ -1,6 +1,6 @@
 ---
 title: "Sieve — Filter through the (financial) noise"
-date: 2026-05-16
+date: 2026-05-09
 category: sieve
 hook: "Three loans, twenty-one mutual funds, and no app I could find would tell me the age at which I could stop working (for money)."
 reading_time: 5

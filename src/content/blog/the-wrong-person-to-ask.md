@@ -1,12 +1,12 @@
 ---
 title: "The wrong person to ask"
-date: 2026-05-17
+date: 2026-05-10
 category: sieve
 hook: "Sieve will hold your income, your expenses, every fund you own — and I want to be the wrong person to ask for any of it."
 reading_time: 5
 ---
 
-I said last weekend I'd put the privacy decision on the table before any code lands. This is that post.
+I said previously that I'd put the privacy decision on the table before any code lands. This is that post.
 
 When I thought about showing Sieve to a friend the other day, my first thought was — wait, that means I'll see all their money. Then I went home and spent the weekend trying to figure out how to make that answer be no — at least for anyone who'd rather not share all of their data.
 
